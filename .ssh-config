@@ -1,0 +1,22 @@
+Host docker-multi-network-10
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/ody/vagrant/docker-multi-network/.vagrant/machines/docker-multi-network-10/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host docker-multi-network-11
+  HostName 127.0.0.1
+  User vagrant
+  Port 2200
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/ody/vagrant/docker-multi-network/.vagrant/machines/docker-multi-network-11/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+

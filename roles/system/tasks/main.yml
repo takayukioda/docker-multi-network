@@ -1,0 +1,28 @@
+- name: Update system package
+  sudo: yes
+  apt:
+    upgrade: safe
+    state: present
+    update_cache: yes
+- name: Basic installation (build-essential curl git)
+  sudo: yes
+  apt: name={{ item }}
+  with_items:
+    - build-essential
+    - curl
+    - git
+- name: Verify NodeJS installation
+  command: type -af node
+  register: verify_node
+  failed_when: false # never be failure
+  changed_when: verify_node | failed
+- name: NodeJS installation
+  sudo: yes
+  shell: curl -sL https://deb.nodesource.com/setup_{{ node_version }} | sudo bash
+  when: verify_node | failed
+  register: download_node
+- name: Install NodeJS
+  sudo: yes
+  apt:
+    name: nodejs
+  when: download_node | success
