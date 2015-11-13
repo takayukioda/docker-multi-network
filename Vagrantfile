@@ -10,7 +10,7 @@ Vagrant.configure(2) do |config|
   # https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
   box = "ubuntu1404"
   (10..11).each do |addr|
-    name = "docker-multi-network-" + addr.to_s
+    name = "dmn-" + addr.to_s
     config.vm.define name do |server|
       server.vm.box = box
       server.vm.hostname = name

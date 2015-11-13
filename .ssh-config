@@ -1,4 +1,4 @@
-Host docker-multi-network-10
+Host dmn-10
   HostName 127.0.0.1
   User vagrant
   Port 2222
@@ -9,7 +9,7 @@ Host docker-multi-network-10
   IdentitiesOnly yes
   LogLevel FATAL
 
-Host docker-multi-network-11
+Host dmn-11
   HostName 127.0.0.1
   User vagrant
   Port 2200
